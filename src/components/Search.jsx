@@ -80,7 +80,7 @@ const Search = () =>{
         <div className="border-2 border-b-gray-600">
             <div className="p-2.5">
             <input type="text" placeholder="👀 Looking for some crackheads...." 
-            className="p-2 w-full rounded-md border-2 border-gray-400 outline-none hover:border-gray-800"
+            className="bg-gray-300 outline-none w-full "
             onChange={e => setUserName(e.target.value)}
             onKeyDown={handleKey}
             value={userName}

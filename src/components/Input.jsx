@@ -125,11 +125,11 @@ const Input  =() =>{
             <input type="text" 
             placeholder="Send some cake 🎂" 
             onChange={(e) => setText(e.target.value)}
-            className="w-full border-none outline-none text-lg"
+            className="w-full border-none outline-none text-sm lg:text-lg"
             value={text}/>
 
-            <div className="flex items-center gap-5"> {/*send div*/}
-                <GrAttachment className="w-6 h-6 cursor-pointer" />
+            <div className="flex items-center"> {/*send div*/}
+          
 
                 <input type="file" 
                  id="file"
@@ -138,13 +138,14 @@ const Input  =() =>{
                  />
 
                 <label htmlFor="file">
-                   <BsImageFill className="w-10 h-10 cursor-pointer" />
+                   <BsImageFill className="w-4 h-4 -mr-6 lg:w-6
+                    lg:h-6 cursor-pointer" />
                 </label>
                 <button 
                 onClick={handleSend}
-                className="bg-gray-500 text-gray-200 p-3 w-20 hover:bg-gray-400 hover:text-gray-900"
+                className="text-xl -mr-4 font-bold text-gray-900 lg:text-gray-200 lg:p-4 w-20 lg:text-2xl lg:ml-4"
                 > 
-                Send </button>
+                🍽 </button>
             </div>
 
         </div>

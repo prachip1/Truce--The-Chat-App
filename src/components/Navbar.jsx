@@ -10,11 +10,11 @@ const Navbar = () =>{
 
     return(
         <div className="flex items-center bg-gray-800 h-14 p-9 justify-between text-gray-300"> 
-            <span className="-ml-8">
+            <span className="hidden lg:flex lg:-ml-8 md:flex md:-ml-8">
             <img src={logo} alt="TRUCE"/>
             </span>
 
-            <div className="flex gap-2.5 items-center">
+            <div className="flex-col gap-2.5 items-center lg:flex lg:flex-row">
             <img src={currentUser.photoURL}
             alt="user"  
             className="w-10 h-10 object-cover rounded-full border-solid border-2 border-green-600"/>

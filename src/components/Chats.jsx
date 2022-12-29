@@ -32,15 +32,15 @@ const Chats = () => {
     <div className="flex flex-col">
       {Object.entries(chats)?.sort((a,b)=>b[1].date - a[1].date).map((chat) => (
         <div
-          className="p-2.5 flex items-center gap-2.5 cursor-pointer hover:bg-gray-800 hover:text-gray-200"
+          className="p-2.5 flex flex-col  gap-2.5 cursor-pointer hover:bg-gray-800 hover:text-gray-200 lg:items-center lg:flex-row"
           key={chat[0]}
           onClick={() => handleSelect(chat[1].userInfo)}
           value={chats[0]}
         >
           <img src={chat[1].userInfo?.photoURL} alt="" className="w-14 h-14 rounded-full object-cover"/>
           <div className="userChatInfo">
-            <span>{chat[1].userInfo?.displayName}</span>
-            <p>{chat[1].lastMessage?.text}</p>
+            <span className="ml-4 lg:ml-2">{chat[1].userInfo?.displayName}</span>
+            <p className="hidden lg:flex lg:ml-2 md:flex">{chat[1].lastMessage?.text}</p>
           </div>
         </div>
       ))}
